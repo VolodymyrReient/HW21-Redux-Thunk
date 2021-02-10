@@ -9,7 +9,8 @@ const instantState = {
 const GetData = (state = instantState, action) => {
   switch (action.type) {
     case "CREATE_USER":
-      return { ...state, users: action.payload  };
+      console.log(action.payload)
+      return { ...state, users: [...action.payload]};
     default:
       return state;
   }   

@@ -9,7 +9,7 @@ class AddUser extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: "",
+             name: "",
             username: "@",
             avatar: "",
             message: ""
@@ -20,9 +20,11 @@ class AddUser extends Component {
     takeVal() {
         if (this.state.name !== "" && this.state.username  !== "" && this.state.avatar !=="" ) {
             return (this.props.CreateUsers({
-                name: this.state.name,
-                nickname: this.state.username,
-                image: this.state.avatar
+                data: [{
+                    name: this.state.name,
+                    nickname: this.state.username,
+                    image: this.state.avatar
+                }]
             }), this.setState({
                 name: "",
                 username: "",
