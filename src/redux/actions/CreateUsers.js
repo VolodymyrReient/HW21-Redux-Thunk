@@ -4,7 +4,7 @@ export default function setUser(data) {
 		const json = await response.json();
 		dispatch({
 			type: "CREATE_USER",
-			payload: [json, data],
+			payload:  [data, json],
 		});
 	};
   }
