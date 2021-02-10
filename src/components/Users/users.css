@@ -1,0 +1,19 @@
+.user-wrapper {
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 500px;
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  background: chocolate;
+  align-items: center;
+}
+.avatar img {
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+}
+.user-wrapper span {
+  color: beige;
+  font-size: 18px;
+}

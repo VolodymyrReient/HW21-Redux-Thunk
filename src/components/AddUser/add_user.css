@@ -1,0 +1,29 @@
+.wrapper {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+.wrapper input {
+  margin: 0 auto;
+  width: 500px;
+  height: 35px;
+}
+.wrapper input + input {
+  margin-top: 15px;
+}
+.wrapper button {
+  margin: 0 auto;
+  margin-top: 15px;
+  height: 35px;
+  width: 510px;
+  outline: none;
+  border: none;
+  background: aquamarine;
+}
+.message {
+  text-align: center;
+  color: red;
+  padding: 10px 0;
+}

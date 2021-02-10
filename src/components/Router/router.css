@@ -1,0 +1,14 @@
+.navbar-wrapper {
+  width: 100%;
+  background: darkblue;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+.navbar-wrapper a {
+  color: azure;
+  text-decoration: none;
+}
+.navbar-wrapper a + a {
+  margin-left: 15px;
+}
