@@ -6,16 +6,15 @@ import User from "./Users";
 const UsersInfo = ({usersData}) => {
     return (
         <div>
-        {console.log(usersData)}
-            {usersData && usersData.map((el, i) => {return(<User {...el} key={i}/>)})}
+        
+        {usersData && usersData.map((el) => (el.data).map((el, i) => {return <User name={el.name} avatar={el.avatar} username={el.username} key={i}/>  }))}
         </div>
     )
 }
 
 const mapStateToProps = (state) => {
-    console.log(state.GetData.users.data)
   return {
-      usersData: state.GetData.users.data,
+      usersData: state.GetData.users.data
   };
 };
 
