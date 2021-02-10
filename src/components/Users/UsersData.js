@@ -1,5 +1,3 @@
-
-
 const userArr = [{
     name: "Anakin Skywalker",
     nickname: "@dart_vader",

@@ -1,7 +1,7 @@
 import {React, Component} from "react";
 import { connect } from 'react-redux';
 
-import CreateUsers from "../../redux/actions/CreateUsers";
+import setUser from "../../redux/actions/CreateUsers";
 import "./add_user.css"
 
 class AddUser extends Component {
@@ -55,7 +55,7 @@ class AddUser extends Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-    CreateUsers: (users) => dispatch(CreateUsers(users)),
+    CreateUsers: (users) => dispatch(setUser(users)),
   })
 
 
