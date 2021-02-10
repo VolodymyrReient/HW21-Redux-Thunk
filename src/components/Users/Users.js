@@ -3,12 +3,12 @@ import React from "react";
 import "./users.css";
 
 
-const Users = ({name, nickname, image}) => {
+const Users = ({name, username, avatar}) => {
     return (
         <div className="user-wrapper">
-        <div className="avatar"><img src={image} alt="avatar"/></div>
+        <div className="avatar"><img src={avatar} alt="avatar"/></div>
             <span>{name}</span>
-            <span>{nickname}</span>
+            <span>{username}</span>
         </div>
     )
 }

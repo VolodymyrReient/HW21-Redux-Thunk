@@ -4,28 +4,29 @@ import { connect } from 'react-redux';
 import setUser from "../../redux/actions/CreateUsers";
 import "./add_user.css"
 
+
 class AddUser extends Component {
     constructor(props) {
         super(props);
         this.state = {
             name: "",
-            nickname: "@",
-            image: "",
+            username: "@",
+            avatar: "",
             message: ""
         };
         this.onChangeHandler = this.onChangeHandler.bind(this);    
         this.takeVal = this.takeVal.bind(this);    
     }
     takeVal() {
-        if (this.state.name !== "" && this.state.nicknamee  !== "" && this.state.image !=="" ) {
+        if (this.state.name !== "" && this.state.username  !== "" && this.state.avatar !=="" ) {
             return (this.props.CreateUsers({
                 name: this.state.name,
-                nickname: this.state.nickname,
-                image: this.state.image
+                nickname: this.state.username,
+                image: this.state.avatar
             }), this.setState({
                 name: "",
-                nickname: "",
-                image: ""
+                username: "",
+                avatar: ""
             }))
         } else {
             return this.setState({message: "Enter the message"})
@@ -44,9 +45,9 @@ class AddUser extends Component {
             <div className="message">{this.state.message}</div>
                 <input value={this.state.name} type="text" placeholder="Enter a name" name="name"
                 onChange={this.onChangeHandler}/>
-                   <input value={this.state.nickname} type="text" placeholder="Enter a nickname" name="nickname"
+                   <input value={this.state.username} type="text" placeholder="Enter a username" name="username"
                 onChange={this.onChangeHandler}/>
-                      <input value={this.state.image} type="text" placeholder="Enter a avatar" name="image"
+                      <input value={this.state.avatar} type="text" placeholder="Enter a avatar" name="avatar"
                 onChange={this.onChangeHandler}/>
                 <button onClick={this.takeVal}>Submit</button>
             </div>
