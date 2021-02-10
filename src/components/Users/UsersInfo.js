@@ -11,7 +11,8 @@ const UsersInfo = ({usersData}) => {
     )
 }
 
-const mapStateToProps = (state) => { 
+const mapStateToProps = (state) => {
+    console.log() 
   return {
       usersData: state.GetData.users.data
   };
